@@ -1,0 +1,54 @@
+.checkout{
+    display: flex;
+    padding: 20px;
+    height: max-content;
+}
+
+.checkout__ad {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.checkout__title {
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.empty {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.empty__message {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.login__btn {
+    background: #f0c14b;
+    border-radius: 3px;
+    height: 24px;
+    border: 1px solid;
+    margin-top: 10px;
+    margin-right: 8px;
+    border-color: #a88734 #9c7e31 #856a29;
+}
+
+.home__btn {
+    border-radius: 3px;
+    height: 24px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color:gray;
+}
+
+.line { 
+    margin: 40px;
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
