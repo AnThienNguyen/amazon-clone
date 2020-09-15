@@ -1,0 +1,54 @@
+.prime {
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    background-color: rgb(234, 237, 237);
+    height: max-content;
+    padding-bottom: 20px;
+    margin: 50px auto 20px;
+}
+
+.prime__banner {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.prime__row {
+    display: flex;
+    z-index: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.prime__ad {
+    margin: 15px;
+    align-items: center;
+}
+
+.prime__ad > img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 640px) {
+    .prime{
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .prime__row {
+        width: 100%;
+        margin-top: 10px;
+        display: block;
+        z-index: 1;
+    }
+    
+    .prime__banner {
+        margin-top: 118px;
+        width: 100%;
+        height: 100px;
+        z-index: -1;
+        object-fit: cover;
+    }
+}

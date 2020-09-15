@@ -41,7 +41,8 @@ function Orders() {
                 </div> :
                 <div className='no__user'>
                     <h2>Oops! Looks like you're not signed in.</h2>
-                    <Link to="/login"><button className="login__btn">Sign in to your account</button></Link>
+                    <p>You must have an account to load your data.</p>
+                    <Link to="/login"><button className="orders__login">Sign in to your account</button></Link>
                 </div>
             }
         </div>

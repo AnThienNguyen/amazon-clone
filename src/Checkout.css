@@ -2,6 +2,18 @@
     display: flex;
     padding: 20px;
     height: max-content;
+    padding-top: 100px;
+}
+
+.checkout__left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.checkout__right {
+    display: flex;
+    flex-direction: column;
 }
 
 .checkout__ad {
@@ -16,10 +28,25 @@
     border-bottom: 1px solid lightgray;
 }
 
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    19% { transform: rotate(0deg); }
+    21% { transform: rotate(-5deg); }
+    22% { transform: rotate(5deg); }
+    23% { transform: rotate(-5deg); }
+    24% { transform: rotate(5deg); }
+    26% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .empty {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.empty > img {
+    animation: wiggle 8s infinite;
 }
 
 .empty__message {
@@ -27,8 +54,8 @@
     margin-left: 10px;
 }
 
-.login__btn {
-    background: #f0c14b;
+.checkout__login {
+    background: linear-gradient(#ffeb77, #f0c14b);
     border-radius: 3px;
     height: 24px;
     border: 1px solid;
@@ -37,12 +64,23 @@
     border-color: #a88734 #9c7e31 #856a29;
 }
 
-.home__btn {
+.checkout__login:hover {
+    background: #f0c14b;
+    cursor: pointer;
+}
+
+.checkout__home {
+    background: linear-gradient(white, rgb(224, 224, 224));
     border-radius: 3px;
     height: 24px;
     border: 1px solid;
     margin-top: 10px;
     border-color:gray;
+}
+
+.checkout__home:hover {
+    background: rgb(224, 224, 224);
+    cursor: pointer;
 }
 
 .line { 
@@ -51,4 +89,31 @@
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+
+@media only screen and (max-width: 640px) {
+    .checkout {
+        padding-top: 130px;
+        flex-wrap: wrap;
+    }
+
+    .empty > img{
+        width: 70%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .empty__message {
+        font-size: 14px;
+    }
+
+    .checkout__login {
+        width: 100%;
+        height: auto;
+    }
+    
+    .checkout__home {
+        width: 100%;
+        height: auto;
+    }
 }

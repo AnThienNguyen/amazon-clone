@@ -9,8 +9,6 @@ import { auth } from './firebase';
 function Header() {
     const [{ basket, user }, dispatch] = useStateValue();
 
-    console.log("this is the basket >>> ", basket);
-
     const handleAuthentication = () => {
         if (user) {
             auth.signOut();
@@ -36,31 +34,32 @@ function Header() {
                     <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign-In'}</span>
                 </div>
                 </Link>
-            </div>
-
-            <Link to='/orders'>
-                 <div className="header__nav">
-                    <div className="header__option">
-                        <span className="header__optionLineOne">Returns</span>
-                        <span className="header__optionLineTwo">& Orders</span>
-                    </div>
-                </div>
-            </Link>
             
-
-            <div className="header__nav">
-                <div className="header__option">
-                    <span className="header__optionLineOne">Your</span>
-                    <span className="header__optionLineTwo">Prime</span>
-                </div>
+                <Link to='/orders'>
+                    <div className="header__nav">
+                        <div className="header__option">
+                            <span className="header__optionLineOne">Returns</span>
+                            <span className="header__optionLineTwo">& Orders</span>
+                        </div>
+                    </div>
+                </Link>
+                
+                <Link to='/prime'>
+                    <div className="header__nav">
+                        <div className="header__option">
+                            <span className="header__optionLineOne">Your</span>
+                            <span className="header__optionLineTwo">Prime</span>
+                        </div>
+                    </div>
+                </Link>
+                
+                <Link to='/checkout'>
+                    <div className="header__optionBasket">
+                        <ShoppingBasketIcon/>
+                        <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+                    </div>
+                </Link>
             </div>
-
-            <Link to='/checkout'>
-                <div className="header__optionBasket">
-                    <ShoppingBasketIcon/>
-                    <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
-                </div>
-            </Link>
         </div>
     );
 }

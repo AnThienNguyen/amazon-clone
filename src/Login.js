@@ -43,10 +43,10 @@ function Login() {
 
                 <form>
                     <h5>Email</h5>
-                    <input type='text' value={email} onChange={e => setEmail(e.target.value)}/>
+                    <input type='text' placeholder=' example@mail.com' value={email} onChange={e => setEmail(e.target.value)}/>
 
                     <h5>Password</h5>
-                    <input type='password' value={password} onChange={e => setPassword(e.target.value)}/>
+                    <input type='password' placeholder=' password' value={password} onChange={e => setPassword(e.target.value)}/>
 
                     <button type='submit' onClick={signIn} className='login__signInButton'>Sign In</button>
                 </form>

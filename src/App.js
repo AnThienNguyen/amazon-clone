@@ -7,6 +7,7 @@ import Checkout from './Checkout';
 import Login from './Login.js';
 import Orders from './Orders.js';
 import Payment from './Payment.js';
+import Prime from './Prime.js';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import { loadStripe } from '@stripe/stripe-js'
@@ -21,7 +22,6 @@ function App() {
     // will only run once when the app component loads...
 
     auth.onAuthStateChanged(authUser => {
-      console.log('THE USER IS >>>', authUser);
 
       if (authUser) {
         // user just logged in
@@ -49,19 +49,23 @@ function App() {
           <Route path="/login">
             <Login/>
           </Route>
-          <Route path="/checkout">
-            <Header/>
-            <Checkout/>
-          </Route>
           <Route path="/orders">
             <Header/>
             <Orders/>
+          </Route>
+          <Route path="/checkout">
+            <Header/>
+            <Checkout/>
           </Route>
           <Route path="/payment">
             <Header/>
             <Elements stripe={promise}>
               <Payment/>
             </Elements>
+          </Route>
+          <Route path="/prime">
+            <Header/>
+            <Prime/>
           </Route>
           <Route path="/">
             <Header/>

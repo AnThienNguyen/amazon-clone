@@ -36,9 +36,6 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
-
-    console.log('The Secret >>> ', clientSecret)
-
     const handleSubmit = async (event) => {
         // do strip stuff...
         event.preventDefault();
@@ -52,7 +49,7 @@ function Payment() {
             // paymentIntent = payment confirmation
 
             // push into database (nosql)
-            db
+            if(user) {db
                 .collection('users')
                 .doc(user?.uid)
                 .collection('orders')
@@ -62,15 +59,13 @@ function Payment() {
                     amount: paymentIntent.amount,
                     created: paymentIntent.created
                 })
+            }
 
             setSucceeded(true);
-            setError(null)
-            setProcessing(false)
+            setError(null);
+            setProcessing(false);
 
-            dispatch({
-                type: 'EMPTY_BASKET'
-            })
-            history.replace('/orders')
+            history.replace('/receipt');
         })
     }
 
