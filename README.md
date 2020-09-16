@@ -6,9 +6,6 @@ This app uses Stripe functionality and Firebase for user authentication and host
 Live Demo: [Amazon Clone](https://clone-eb991.web.app/)
 
 ![Homepage](images/home.JPG)
-![Login](images/login.JPG)
-![Checkout](images/checkout.JPG)
-![Payment](images/payment.JPG)
 
 ## Getting Started
 
@@ -22,8 +19,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 When checking out, you can use this card for testing:
 
 > CCN: 4242 4242 4242 4242 
+
 > Date: 04/24 
+
 > CVV: 242 
+
 > Zip: 42424
 
 ## Built With
