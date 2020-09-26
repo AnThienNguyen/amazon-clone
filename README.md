@@ -10,23 +10,6 @@ Checkout the [Live Demo](https://clone-eb991.web.app/)
 
 ## Getting Started
 
-Before you download the project, make sure to have node.js installed. 
-You can find it [here.](https://nodejs.org/en/download/)
-
-### Installation
-After downloading, navigate to the project directory and run:
-
-`npm install`
-
-Start the server by running:
-
-`npm build`
-
-`npm start`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-## Other Notes
 You do not need to make an account to purchase an item. However, the order will not be saved and will not be displayed in the Orders page even after you log in.
 
 When checking out, you can use this card for testing:
@@ -38,6 +21,23 @@ When checking out, you can use this card for testing:
 > CVV: 242 
 
 > Zip: 42424
+
+### Installation
+Before you download the project, make sure to have node.js installed. 
+
+You can find it [here.](https://nodejs.org/en/download/)
+
+After downloading, navigate to the project directory and run:
+
+`npm install`
+
+Start the server by running:
+
+`npm build`
+
+`npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Built With
 
