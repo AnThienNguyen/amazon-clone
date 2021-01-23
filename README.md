@@ -12,14 +12,18 @@ Checkout the [Live Demo](https://clone-eb991.web.app/)
 
 You do not need to make an account to purchase an item. However, the order will not be saved and will not be displayed in the Orders page even after you log in.
 
-When checking out, you can use this card for testing:
+### Demo Account
+
+You can use this account for demo:
+
+> Email: testing@gmail.com
+> Password: abc123
+
+When checking out, use this card for testing:
 
 > CCN: 4242 4242 4242 4242 
-
 > Date: 04/24 
-
 > CVV: 242 
-
 > Zip: 42424
 
 ### Installation
@@ -28,11 +32,9 @@ Before you download the project, make sure to have node.js installed.
 You can find it [here.](https://nodejs.org/en/download/)
 
 After downloading, navigate to the project directory and run:
-
 `npm install`
 
 Start the server by running:
-
 `npm build`
 
 `npm start`
