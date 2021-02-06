@@ -8,6 +8,7 @@ import Login from './Login.js';
 import Orders from './Orders.js';
 import Payment from './Payment.js';
 import Prime from './Prime.js';
+import Receipt from './Receipt.js';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import { loadStripe } from '@stripe/stripe-js'
@@ -66,6 +67,9 @@ function App() {
           <Route path="/prime">
             <Header/>
             <Prime/>
+          </Route>
+          <Route path="/receipt">
+            <Receipt/>
           </Route>
           <Route path="/">
             <Header/>

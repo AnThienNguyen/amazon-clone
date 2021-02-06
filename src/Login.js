@@ -35,7 +35,7 @@ function Login() {
     return (
         <div className='login'>
             <Link to='/'>
-            <img className='login__logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png'/>
+            <img className='login__logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png' alt='Logo'/>
             </Link>
 
             <div className='login__container'>
@@ -52,9 +52,13 @@ function Login() {
                 </form>
 
                 <p>
-                    By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
+                    Hello! You can either create a new account or use the demo account.
                 </p>
-                <button onClick={register} className='login__registerButton'>Create your Amazon Account</button>
+                <p>
+                    <strong>Email:</strong> testing@gmail.com 
+                    <br/><strong>Password:</strong> abc123
+                </p>
+                <button onClick={register} className='login__registerButton'>Create your Amazon Clone Account</button>
             </div>
             <div className='line'> </div>
         </div>

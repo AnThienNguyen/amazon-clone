@@ -16,12 +16,17 @@ function Receipt() {
             type: "EMPTY_BASKET"
         });
 
-        history.replace('/orders');
+        if(user) {
+            history.replace('/orders');
+        }
+        else{
+            history.replace('/');
+        }
     };
 
     return (
         <div className='receipt'>
-            <h1>Review Order</h1>
+            <h1>Thank you for placing your order!</h1>
             <div className='receipt__info'>
                 <div key={basket}>
                     {basket.map((item) => (
@@ -48,7 +53,10 @@ function Receipt() {
                     prefix={'$'}
                 />  
             </div>
-            <button onClick={emptyBasket} className='receipt__orders'>Go to Orders</button>
+            {user ? 
+                <button onClick={emptyBasket} className='receipt__orders'>Go back to Orders</button>:
+                <button onClick={emptyBasket} className='receipt__orders'>Go back to Home</button>
+            }
         </div>
     )
 }

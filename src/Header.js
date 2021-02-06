@@ -27,29 +27,25 @@ function Header() {
                 <SearchIcon className="header__searchIcon"/>
             </div>
 
-            <div onClick={handleAuthentication} className="header__nav">
+            <div className="header__nav">
                 <Link to={!user && '/login'}>
-                <div className="header__option">
-                    <span className="header__optionLineOne">Hello {!user ? 'Guest' : user?.email.substring(0, user?.email.indexOf("@"))}</span>
-                    <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign-In'}</span>
-                </div>
+                    <div onClick={handleAuthentication} className="header__option">
+                        <span className="header__optionLineOne">Hello {!user ? 'Guest' : user?.email.substring(0, user?.email.indexOf("@"))}</span>
+                        <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign-In'}</span>
+                    </div>
                 </Link>
             
                 <Link to='/orders'>
-                    <div className="header__nav">
-                        <div className="header__option">
-                            <span className="header__optionLineOne">Returns</span>
-                            <span className="header__optionLineTwo">& Orders</span>
-                        </div>
+                    <div className="header__option">
+                        <span className="header__optionLineOne">Returns</span>
+                        <span className="header__optionLineTwo">& Orders</span>
                     </div>
                 </Link>
                 
                 <Link to='/prime'>
-                    <div className="header__nav">
-                        <div className="header__option">
-                            <span className="header__optionLineOne">Your</span>
-                            <span className="header__optionLineTwo">Prime</span>
-                        </div>
+                    <div className="header__option">
+                        <span className="header__optionLineOne">Your</span>
+                        <span className="header__optionLineTwo">Prime</span>
                     </div>
                 </Link>
                 

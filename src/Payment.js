@@ -28,7 +28,7 @@ function Payment() {
             const response = await axios({
                 method: 'post',
                 // Stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+                url: `/payments/create?total=${Math.round(getBasketTotal(basket) * 100)}`
             });
             setClientSecret(response.data.clientSecret)
         }
@@ -64,9 +64,9 @@ function Payment() {
             setSucceeded(true);
             setError(null);
             setProcessing(false);
-
-            history.replace('/receipt');
         })
+
+        history.replace('/receipt');
     }
 
     const handleChange = event => {
@@ -89,8 +89,8 @@ function Payment() {
                     </div>
                     <div className='payment__address'>
                         <p>{user?.email}</p>
-                        <p>123 React Lane</p>
-                        <p>City, ST</p>
+                        <p>4321 Rocky Rd</p>
+                        <p>Ice Cream City, CA</p>
                     </div>
                 </div>
 
@@ -121,7 +121,14 @@ function Payment() {
                         <form onSubmit={handleSubmit}>
                             <CardElement onChange={handleChange}/>
 
+                            <div className='payment__demo'>
+                                <p><strong>Card:</strong> 4242 4242 4242 4242</p>
+                                <p><strong>Date:</strong> 04/24</p>
+                                <p><strong>CVV:</strong> 242</p>
+                                <p><strong>Zip:</strong> 42424</p>
+                            </div>
                             <div className='payment__priceContainer'>
+                                
                                 <CurrencyFormat
                                     renderText={(value) => (
                                         <h3>Order Total: {value}</h3>
