@@ -20,6 +20,12 @@ You can use this account for demo:
 
 > Password: abc123
 
+![Login](images/login.JPG)
+
+On the checkout page, you can see the current items in the basket and the subtotal of all the items. Items can be removed from the basket at checkout or during payment processing by clicking on the "Remove from Basket" button. The item will be removed and the subtotal updated.
+
+![Checkout](images/checkout.gif)
+
 When checking out, use this card for testing:
 
 > CCN: 4242 4242 4242 4242 
@@ -29,6 +35,8 @@ When checking out, use this card for testing:
 > CVV: 242 
 
 > Zip: 42424
+
+![Checkout2](images/checkout2.gif)
 
 ### Installation
 Before you download the project, make sure to have node.js installed. You can find it [here.](https://nodejs.org/en/download/)
