@@ -1,6 +1,6 @@
-# Amazon Clone
+# Ecommerce Site
 
-This is an Amazon clone built with React. It has full login and e-commerce functionality. The clone allows users to register, login, and get their order history as well as add and remove items from their shopping cart, and payment processing.
+This is an Amazon inspired e-commerce site built with React that has full login and e-commerce functionality. The site allows users to register, login, and get their order history as well as add and remove items from their shopping cart, and payment processing.
 
 This app uses Stripe for payment processing and Firebase for user authentication and hosting.
 
